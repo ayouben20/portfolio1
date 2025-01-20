@@ -72,6 +72,68 @@
     height: 250px;  /* Adjust for smaller screens */
   }
 }
+.image-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darken background */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.overlay .zoom-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+}
+
+.overlay .nav-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay .nav-arrows button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Optionally, zoom effect when hovering over image */
+.image-container:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
 		</style>
 	</head>
 
@@ -351,40 +413,51 @@
 		    		<div class="row port">
 		    			<div class="col-md-8 col-md-offset-2 text-center button-group" id="filters">
 		    				<button type="button" class="btn btn-default is-checked" data-filter="*">All</button>
-		    				<button type="button" class="btn btn-default" data-filter=".web">Web Design</button>
+		    				<button type="button" class="btn btn-default" data-filter=".web">Web</button>
 		    				<button type="button" class="btn btn-default" data-filter=".game">Game</button>
-		    				<button type="button" class="btn btn-default" data-filter=".app">App</button>
+		    				<button type="button" class="btn btn-default" data-filter=".posters">Posters</button>
+		    				<button type="button" class="btn btn-default" data-filter=".characters">Characters</button>
+		    				<button type="button" class="btn btn-default" data-filter=".logo">Logo</button>
 		    			</div>
 		    		</div>	<!-- row -->
 		    		<div class="row">
 		    			<div class="isotope" id="port-items">
 		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
-		    					<img class="img-responsive" src="img/web-design-1.jpg" >
-		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item game" data-category="game">
-		    					<img class="img-responsive" src="img/game-2.jpg">
-		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item app" data-category="app">
-		    					<img class="img-responsive" src="img/app-1.jpg">
+								
+		    					<img class="img-responsive" width="300px" height="200px" src="img/petadopt2.png" >
 		    				</div>
 		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
-		    					<img class="img-responsive" src="img/web-design-2.jpg">
-		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item game" data-category="game">
-		    					<img class="img-responsive" src="img/game-1.jpg">
-		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item app" data-category="app">
-		    					<img class="img-responsive" src="img/app-2.jpg">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/artivest.png" >
 		    				</div>
 		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
-		    					<img class="img-responsive" src="img/web-design-3.jpg">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/agepprofil.png" >
 		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item game" data-category="game">
-		    					<img class="img-responsive" src="img/game-3.jpg">
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/dashboardagep.png" >
 		    				</div>
-		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item app" data-category="app">
-		    					<img class="img-responsive" src="img/app-3.jpg">
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/loginagep.png" >
 		    				</div>
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/employe portal1 (1).png" >
+		    				</div>
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/employe portal1 (2).png" >
+		    				</div>
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item game"  data-category="game">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/snake.png">
+		    				</div>
+		    				
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item characters" data-category="characters">
+		    					<img class="img-responsive" width="300px" height="200px" src="img/character.jpg">
+		    				</div>
+		    				<div class="col-md-4 col-sm-6 col-xs-6 element-item logo" data-category="logo">
+		    					<img class="img-responsive" width="300px" height="300px" src="img/logowhite.jpg">
+		    				</div>
+							<div class="col-md col-sm col-xs element-item posters"  data-category="posters">
+		    					<img class="img-responsive" width="300px" src="img/affiche.png">
+		    				</div>
+		    				
 		    			</div>	<!-- isotope -->
 		    		</div>	<!-- row -->
 	    		</div>	<!-- main_content -->
@@ -436,18 +509,16 @@
 									</span>
 								<textarea class="form-control" rows="6" type= "text" placeholder="Your Message" required></textarea>
 							</div>
-							<input class="btn btn-primary send" type="submit" value="Send Message">
+							<input class="btn btn-primary send" type="submit" value="Send Message" >
 						</form>
 					</div>	
 				</div>
 				<div class= "row">
 					<div class= "col-md-6 col-md-offset-3 text-center">
 						<ul class="socials-icons">
+							
 							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Facebook" class="facebook"><i class="fa fa-facebook"></i></a>
-							</li>
-							<li>
-								<a href="https://github.com" data-toggle="tooltip" title="Share on GitHub" class="facebook">
+								<a href="https://github.com/ayouben20" data-toggle="tooltip" title="Share on GitHub" class="facebook">
 									<i class="fa fa-github"></i>
 								</a>
 							</li>
@@ -455,10 +526,10 @@
 								<a href="mailto:ayoubbenammour23@gmail.com" data-toggle="tooltip" title="Send email via Gmail" class="facebook"><i class="fa fa-envelope"></i></a>
 							</li>							
 							<li>
-								<a href="#" data-toggle="tooltip" title="Share in Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.instagram.com/ayoubbenammour21?igsh=djFlc2I2OGt1Nmtn&utm_source=qr" data-toggle="tooltip" title="Share in Instagram" class="instagram"><i class="fa fa-instagram"></i></a>
 							</li>
 							<li>
-								<a href="https://www.linkedin.com" data-toggle="tooltip" title="Share on LinkedIn" class="facebook">
+								<a href="https://www.linkedin.com/in/ayoub-benammour" data-toggle="tooltip" title="Share on LinkedIn" class="facebook">
 									<i class="fa fa-linkedin"></i>
 								</a>
 							</li>
