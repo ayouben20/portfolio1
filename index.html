@@ -505,7 +505,6 @@
 					<div class="row">
 						<div class="isotope" id="port-items">
 							<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
-
 								<img class="img-responsive" width="300px" height="200px" src="img/petadopt2.png">
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 element-item web" data-category="web">
@@ -663,6 +662,16 @@
 			new WOW().init();
 		</script>
 		<script>
+			document.querySelectorAll('#filters button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Remove the 'is-checked' class from all buttons
+        document.querySelectorAll('#filters button').forEach(function(b) {
+            b.classList.remove('is-checked');
+        });
+        // Add the 'is-checked' class to the clicked button
+        button.classList.add('is-checked');
+    });
+});
 			$(function () {
 				// init Isotope
 				var $container = $('.isotope').isotope
